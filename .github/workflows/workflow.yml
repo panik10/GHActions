@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI {{ github.actor }}
+name: CI ${{ github.actor }}
 env: 
   GITHUB_ACTIONS: true
 
@@ -28,6 +28,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          echo "{{ env.GITHUB_ACTIONS }}"
+          echo "${{ env.GITHUB_ACTIONS }}"
           echo "Deploying to production server on branch $GITHUB_REF"
-          echo "{{ github.event_name }}"
+          echo "${{ github.event_name }}"
