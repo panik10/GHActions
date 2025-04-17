@@ -29,6 +29,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          echo "${{ env.GITHUB_ACTIONS }}"
+          echo "GITHUB_ACTIONS IS ${{ env.GITHUB_ACTIONS }}"
           echo "Deploying to production server on branch $GITHUB_REF"
-          echo "${{ github.event_name }}"
+          echo "The event name is ${{ github.event_name }}"
